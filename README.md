@@ -1,9 +1,6 @@
 ![](/src/main/resources/assets/collectorsconquest/logo.png?raw=true)
 
-Repository for CollectorsConquest, a complete rewrite of EE2 (Equivalent Exchange 2) for modern Minecraft versions. Transmutation tables, collectors, condensers, flying rings, and all the other trinkets you love are here.
-
-Discover powerful alchemical tools, items, and devices. Break down unwanted items into EMC (Energy-Matter Covalence) and use that EMC to create new items.
-
+Repository for CollectorsConquest, a Minecraft mod that grants unlimited building materials as rewards for completing scavenger hunts. 
 
 # I found a bug
 Bugs can be reported at: https://github.com/sinkillerj/CollectorsConquest/issues
@@ -12,54 +9,3 @@ Please try the latest release build before reporting, be sure to also include an
 
 # Downloads
 https://www.curseforge.com/minecraft/mc-mods/collectorsconquest/files
-
-# Support Development
-![](/patreon.png?raw=true)
-
-We accept donations via Patreon, visit the team members section to learn more.
-
-# Join the Conversation
-
-Discord: https://discord.gg/fkpxV5Z
-
-# Current Team Members
-Members actively working on CollectorsConquest.
-
-SinKillerJ - Head of Alchemical Studies - Main Project & Community Lead:
-
-* Twitter: https://twitter.com/sinkillerj
-* Patreon: https://www.patreon.com/sinkillerj
-
-pupnewfster - Rising Superstar - Current Lead of New Version Ports
-
-* Twitter: https://twitter.com/pupnewfster
-* GitHub Sponsors: https://github.com/sponsors/pupnewfster
-* Ko-fi: https://ko-fi.com/pupnewfster
-* Patreon: https://www.patreon.com/pupnewfster
-
-MaPePeR(Blubberbub) - Alchemical Value Archivist - Lead EMC Mapper Developer: 
-
-* Twitter: https://twitter.com/Blubb3rbub
-
-Lilylicious - Lady of Little Big Things - Assistant Developer:
-
-* Twitter: https://twitter.com/Lilyliciously
-
-# Emeritus (Retired Team Members)
-Members that have retired from their role, but are welcome to return and contribute further.
-
-MozeIntel - Original lead developer: https://twitter.com/Moze_Intel
-
-Williewillus - Maintainer, 1.8.x-1.13.x: https://twitter.com/williewillus
-
-# Former Team Members
-Members that are no longer part of the team.
-
-Magic Banana - Former texture artist: https://twitter.com/Magic_Banana_
-
-Kolatra - Former collaborator: https://twitter.com/ItsKolatra
-
-# Thanks To
-x3n0ph0b3 - EE2 creator, Allowed use of EE2 assets: https://twitter.com/x3n0ph0b3x
-
-MidnightLightning - EE2 GUI Textures: https://github.com/MidnightLightning
