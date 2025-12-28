@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "minecraft:lava_bucket"
+    },
+    "O": {
+      "item": "minecraft:coal_block"
+    },
+    "B": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "O O",
+    "OLO"
+  ],
+  "result": {
+    "item": "projecte:citrine_sanctum"
+  },
+  "show_notification": true
+}

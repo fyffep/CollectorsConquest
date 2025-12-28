@@ -1,0 +1,33 @@
+{
+  "parent": "projecte:citrine_sanctum",
+  "display": {
+    "icon": {
+      "item": "minecraft:oak_log"
+    },
+    "title": {
+      "translate": "advancements.projecte.infinite_wood"
+    },
+    "description": {
+      "translate": "advancements.projecte.infinite_wood.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "scavenger_hunt_fulfilled": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["projecte:infinite_wood_trophy"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["scavenger_hunt_fulfilled"]
+  ]
+}

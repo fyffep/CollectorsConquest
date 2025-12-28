@@ -1,0 +1,33 @@
+{
+  "parent": "projecte:citrine_sanctum",
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_block"
+    },
+    "title": {
+      "translate": "advancements.projecte.infinite_iron"
+    },
+    "description": {
+      "translate": "advancements.projecte.infinite_iron.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+      "scavenger_hunt_fulfilled": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": ["projecte:infinite_iron_trophy"]
+            }
+          ]
+        }
+    }
+  },
+  "requirements": [
+    ["scavenger_hunt_fulfilled"]
+  ]
+}

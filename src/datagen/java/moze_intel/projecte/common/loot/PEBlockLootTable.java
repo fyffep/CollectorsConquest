@@ -1,0 +1,66 @@
+package moze_intel.projecte.common.loot;
+
+import java.util.HashSet;
+import java.util.Set;
+import moze_intel.projecte.gameObjs.registries.PEBlocks;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
+import net.minecraft.data.loot.BlockLootSubProvider;
+import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.TntBlock;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import org.jetbrains.annotations.NotNull;
+
+public class PEBlockLootTable extends BlockLootSubProvider {
+
+	private final Set<Block> knownBlocks = new HashSet<>();
+
+	public PEBlockLootTable() {
+		super(Set.of(
+
+		), FeatureFlags.VANILLA_SET);
+	}
+
+	@Override
+	protected void generate() {
+		dropSelf(PEBlocks.CITRINE_SANCTUM.getBlock());
+	}
+
+	@Override
+	public void dropOther(@NotNull Block block, @NotNull ItemLike drop) {
+		//Override to use our own dropping method that names the loot table
+		add(block, dropping(drop));
+	}
+
+	protected LootTable.Builder dropping(ItemLike item) {
+		return LootTable.lootTable().withPool(applyExplosionCondition(item, LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+				.name("main")
+				.add(LootItem.lootTableItem(item))
+		));
+	}
+
+	private void registerCustomTNT(Block tnt) {
+		add(tnt, LootTable.lootTable().withPool(applyExplosionCondition(tnt, LootPool.lootPool().setRolls(ConstantValue.exactly(1))
+				.name("main")
+				.add(LootItem.lootTableItem(tnt).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(tnt)
+						.setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(TntBlock.UNSTABLE, false)))))));
+	}
+
+	@Override
+	protected void add(@NotNull Block block, @NotNull LootTable.Builder table) {
+		//Overwrite the core register method to add to our list of known blocks
+		super.add(block, table);
+		knownBlocks.add(block);
+	}
+
+	@NotNull
+	@Override
+	protected Iterable<Block> getKnownBlocks() {
+		return knownBlocks;
+	}
+}
