@@ -1,10 +1,7 @@
 package moze_intel.projecte.gameObjs.blocks;
 
-import moze_intel.projecte.gameObjs.items.PhilosophersStone;
 import moze_intel.projecte.utils.WorldHelper;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -53,16 +50,16 @@ public abstract class BlockDirection extends Block {
 		}
 	}
 
-	@Override
-	@Deprecated
-	public void attack(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull Player player) {
-		if (!level.isClientSide) {
-			ItemStack stack = player.getMainHandItem();
-			if (!stack.isEmpty() && stack.getItem() instanceof PhilosophersStone) {
-				level.setBlockAndUpdate(pos, level.getBlockState(pos).setValue(FACING, player.getDirection().getOpposite()));
-			}
-		}
-	}
+//	@Override
+//	@Deprecated
+//	public void attack(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull Player player) {
+//		if (!level.isClientSide) {
+//			ItemStack stack = player.getMainHandItem();
+//			if (!stack.isEmpty() && stack.getItem() instanceof PhilosophersStone) {
+//				level.setBlockAndUpdate(pos, level.getBlockState(pos).setValue(FACING, player.getDirection().getOpposite()));
+//			}
+//		}
+//	}
 
 	@NotNull
 	@Override

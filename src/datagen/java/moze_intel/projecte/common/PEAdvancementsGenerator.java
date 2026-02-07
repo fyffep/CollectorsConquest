@@ -42,7 +42,7 @@ public class PEAdvancementsGenerator implements AdvancementGenerator {
 						false,
 						false,
 						false)
-				.addCriterion("philstone_recipe", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GLOWSTONE_DUST, Items.DIAMOND, Items.REDSTONE))
+				.addCriterion("collectorsconquest_recipe", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GLOWSTONE_DUST, Items.DIAMOND, Items.REDSTONE))
 				.save(advancementConsumer, PECore.rl("root"), fileHelper);
 
 		addCitrineSanctum(advancementConsumer, fileHelper, root);

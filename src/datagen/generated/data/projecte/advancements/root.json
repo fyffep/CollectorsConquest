@@ -1,0 +1,48 @@
+{
+  "criteria": {
+    "collectorsconquest_recipe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:glowstone_dust"
+            ]
+          },
+          {
+            "items": [
+              "minecraft:diamond"
+            ]
+          },
+          {
+            "items": [
+              "minecraft:redstone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "advancements.projecte.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "projecte:citrine_sanctum"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "misc.projecte.mod_name"
+    }
+  },
+  "requirements": [
+    [
+      "collectorsconquest_recipe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

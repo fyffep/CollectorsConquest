@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="${loader_version}"
+issueTrackerURL="https://github.com/sinkillerj/ProjectE/issues"
+license="MIT"
+
+[[mods]]
+  modId="collectorsconquest"
+  version="${version}"
+  displayName="Collector's Conquest"
+  updateJSONURL="https://github.com/fyffep/CollectorsConquest/mc1.20.x/update.json"
+  displayURL="https://github.com/fyffep/CollectorsConquest"
+  logoFile="logo.png"
+  authors="fyffep"
+  credits="Tremendous thanks to the ProjectE team for their framework"
+  description='''A scavenger hunt mod that unlocks unlimited resources.'''
+
+[[dependencies.projecte]]
+  modId="minecraft"
+  mandatory=true
+  versionRange="${mc_version}"
+  side="BOTH"
+[[dependencies.projecte]]
+  modId="forge"
+  mandatory=true
+  versionRange="${forge_version}"
+  side="BOTH"
